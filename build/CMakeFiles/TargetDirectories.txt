@@ -1,0 +1,4 @@
+D:/Artek2023Repositorios/IngSoftware/build/CMakeFiles/Vector.dir
+D:/Artek2023Repositorios/IngSoftware/build/CMakeFiles/example.dir
+D:/Artek2023Repositorios/IngSoftware/build/CMakeFiles/ALL_BUILD.dir
+D:/Artek2023Repositorios/IngSoftware/build/CMakeFiles/ZERO_CHECK.dir

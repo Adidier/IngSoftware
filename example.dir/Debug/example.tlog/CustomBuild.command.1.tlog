@@ -1,0 +1,10 @@
+^D:\ARTEK2023REPOSITORIOS\INGSOFTWARE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Artek2023Repositorios/IngSoftware -BD:/Artek2023Repositorios/IngSoftware --check-stamp-file D:/Artek2023Repositorios/IngSoftware/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
