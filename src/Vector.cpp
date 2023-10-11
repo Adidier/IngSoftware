@@ -24,16 +24,23 @@ Vector3::Vector3(float t_x, float t_y, float t_z)
 
 Vector3 Vector3::add(const Vector3 &addVector)
 {
-    //addVector.m_x = 10f;
-    this->m_x += addVector.m_x;
-    this->m_y += addVector.m_y;
-    this->m_z += addVector.m_z;
-    return Vector3(this->m_x,this->m_y,this->m_z);
+    m_x += addVector.m_x;
+    m_y += addVector.m_y;
+    m_z += addVector.m_z;
+    return Vector3(m_x,m_y,m_z);
 }
 
 Vector3 Vector3::multiScalar(float &t_scalar) {
-    this->m_x *= t_scalar;
-    this->m_y *= t_scalar;
-    this->m_z *= t_scalar;
-    return Vector3(this->m_x, this->m_y, this->m_z);
+    m_x *= t_scalar;
+    m_y *= t_scalar;
+    m_z *= t_scalar;
+    return Vector3(m_x, m_y, m_z);
 }
+
+Vector3 Vector3::operator*(float &t_scalar) {
+    m_x *= t_scalar;
+    m_y *= t_scalar;
+    m_z *= t_scalar;
+    return Vector3(m_x, m_y, m_z);
+}
+

@@ -10,4 +10,5 @@ class Vector3{
     float getZ();//get valor z
     Vector3 add(const Vector3 &addVector); // Vector que suma al vector original otro vector
     Vector3 multiScalar(float &t_scalar); //Vector que se multiplica por un escalar
+    Vector3 operator*(float &t_scalar);
 };
