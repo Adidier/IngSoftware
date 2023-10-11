@@ -48,3 +48,11 @@ float Vector3::dot(const Vector3 &t_v1, const Vector3 &t_v2)
 {
     return (t_v1.m_x * t_v2.m_x + t_v1.m_y * t_v2.m_y + t_v1.m_z * t_v2.m_z);
 }
+
+Vector3 Vector3::sub(const Vector3& subVector)
+{
+    m_x -= subVector.m_x;
+    m_y -= subVector.m_y;
+    m_z -= subVector.m_z;
+    return Vector3(m_x, m_y, m_z);
+}
