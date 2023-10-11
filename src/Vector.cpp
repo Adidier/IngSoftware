@@ -30,3 +30,10 @@ Vector3 Vector3::add(const Vector3 &addVector)
     this->m_z += addVector.m_z;
     return Vector3(this->m_x,this->m_y,this->m_z);
 }
+
+Vector3 Vector3::multiScalar(float& t_scalar) {
+    this->m_x *= t_scalar;
+    this->m_y *= t_scalar;
+    this->m_z *= t_scalar;
+    return Vector3(this->m_x, this->m_y, this->m_z);
+}
