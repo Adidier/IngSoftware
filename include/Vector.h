@@ -13,4 +13,6 @@ class Vector3{
     Vector3 operator*(float &t_scalar);
     static float dot(const Vector3 &t_v1, const Vector3 &t_v2);
     Vector3 sub(const Vector3& subVector);
+
+    static Vector3 operator+(const Vector3 &vec1,const Vector3& vec2);
 };
