@@ -56,6 +56,19 @@ Vector3 Vector3::sub(const Vector3& subVector)
     m_z -= subVector.m_z;
     return Vector3(m_x, m_y, m_z);
 }
+
+Vector3 Vector3::operator+(const Vector3& vec2) {
+    return add(vec2);
+}
+
+float Vector3::magnitude() {
+    return sqrt(m_x * m_x + m_y * m_y + m_z * m_z);
+}
+
+float Vector3::magnitude(const Vector3& vector) {
+    return sqrt(vector.m_x * vector.m_x + vector.m_y * vector.m_y + vector.m_z * vector.m_z);
+}
+
 float Vector3::operator*(const Vector3 &t_v2){
     return dot(this, t_v2); //se retiro el*en this
 }
