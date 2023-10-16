@@ -1,5 +1,5 @@
 #include <iostream>
-#include"Vector.h"
+#include "Vector.h"
 
 /**
  * @brief Suma otro vector a la instancia actual.
@@ -14,12 +14,11 @@
  * @author [Alfredo :c no sirve la docuemntacion tache :c]
  */
 
-
 Vector3::Vector3(float t_x, float t_y, float t_z)
 {
     m_x = t_x;
     m_y = t_y;
-    m_z = t_z; 
+    m_z = t_z;
 }
 
 Vector3 Vector3::add(const Vector3 &addVector)
@@ -27,17 +26,19 @@ Vector3 Vector3::add(const Vector3 &addVector)
     m_x += addVector.m_x;
     m_y += addVector.m_y;
     m_z += addVector.m_z;
-    return Vector3(m_x,m_y,m_z);
+    return Vector3(m_x, m_y, m_z);
 }
 
-Vector3 Vector3::multiScalar(float &t_scalar) {
+Vector3 Vector3::multiScalar(float &t_scalar)
+{
     m_x *= t_scalar;
     m_y *= t_scalar;
     m_z *= t_scalar;
     return Vector3(m_x, m_y, m_z);
 }
 
-Vector3 Vector3::operator*(float &t_scalar) {
+Vector3 Vector3::operator*(float &t_scalar)
+{
     m_x *= t_scalar;
     m_y *= t_scalar;
     m_z *= t_scalar;
@@ -47,4 +48,19 @@ Vector3 Vector3::operator*(float &t_scalar) {
 float Vector3::dot(const Vector3 &t_v1, const Vector3 &t_v2)
 {
     return (t_v1.m_x * t_v2.m_x + t_v1.m_y * t_v2.m_y + t_v1.m_z * t_v2.m_z);
+}
+
+Vector3 Vector3::operator-(Vector3 &t_vector)
+{
+    return Vector3(this->m_x - t_vector.m_x, this->m_y - t_vector.m_y, this->m_z - t_vector.m_z);
+}
+
+Vector3 Vector3::cross(Vector3 &t_v1, Vector3 &t_v2)
+{
+    //(bz - cy)i, (cx - az)j, (ay - bx)k
+    // a b c
+    // x y z
+    return Vector3((t_v1.m_y * t_v2.m_z) - (t_v1.m_z * t_v2.m_y),
+                   (t_v1.m_z * t_v2.m_x) - (t_v1.m_x * t_v2.m_z),
+                   (t_v1.m_x * t_v2.m_y) - (t_v1.m_y * t_v2.m_x));
 }
