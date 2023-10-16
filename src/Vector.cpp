@@ -57,5 +57,5 @@ Vector3 Vector3::sub(const Vector3& subVector)
     return Vector3(m_x, m_y, m_z);
 }
 float Vector3::operator*(const Vector3 &t_v2){
-    return dot(*this, t_v2);
+    return dot(this, t_v2); //se retiro el*en this
 }
