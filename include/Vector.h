@@ -15,4 +15,6 @@ class Vector3{
     Vector3 sub(const Vector3& subVector);
 
     Vector3 operator+(const Vector3& vec2);
+    float magnitude();
+    static float magnitude(const Vector3& vector);
 };
