@@ -1,8 +1,13 @@
 #include <iostream>
+#include <cmath>
 
 class Vector3{
     public:
     float m_x,m_y,m_z; //Variables para el vector 3D sisi
+    float m_directionX;
+    float m_directionY;
+    float m_directionZ;
+    void direction();
     public:
     Vector3(float x,float y, float z); //Constructor genial
     float getX(); //get valor x
@@ -14,5 +19,8 @@ class Vector3{
     static float dot(const Vector3 &t_v1, const Vector3 &t_v2);
     float operator*(const Vector3 &t_v2);
     Vector3 sub(const Vector3& subVector);
+    float getDirectionAxisX(); // float que regresa la direccion de x
+    float getDirectionAxisY(); // float que regresa la direccion de y
+    float getDirectionAxisZ(); // float que regresa la direccion de z
 
 };
