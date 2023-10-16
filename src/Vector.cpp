@@ -57,6 +57,6 @@ Vector3 Vector3::sub(const Vector3& subVector)
     return Vector3(m_x, m_y, m_z);
 }
 
-Vector3 Vector3::operator+(const Vector3& vec1,const Vector3& vec2) {
-    return Vector3(vec1.m_x + vec2.m_x, vec1.m_y + vec2.m_y, vec1.m_z + vec2.m_z);
+Vector3 Vector3::operator+(const Vector3& vec2) {
+    return add(vec2);
 }
