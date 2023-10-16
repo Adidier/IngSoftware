@@ -68,3 +68,7 @@ float Vector3::magnitude() {
 float Vector3::magnitude(const Vector3& vector) {
     return sqrt(vector.m_x * vector.m_x + vector.m_y * vector.m_y + vector.m_z * vector.m_z);
 }
+
+float Vector3::operator*(const Vector3 &t_v2){
+    return dot(this, t_v2); //se retiro el*en this
+}

@@ -12,9 +12,13 @@ class Vector3{
     Vector3 multiScalar(float &t_scalar); //Vector que se multiplica por un escalar
     Vector3 operator*(float &t_scalar);
     static float dot(const Vector3 &t_v1, const Vector3 &t_v2);
+
     Vector3 sub(const Vector3& subVector);
 
     Vector3 operator+(const Vector3& vec2);
     float magnitude();
     static float magnitude(const Vector3& vector);
+
+    float operator*(const Vector3 &t_v2);
+
 };
