@@ -1,5 +1,5 @@
 name: Library Ing Software
-run-name: ${{ github.actor }} is compiling linux library
+run-name: ${{ github.actor }} is compiling macOS library
 on: [push]
 jobs:
   Compile-Library-OSX:
