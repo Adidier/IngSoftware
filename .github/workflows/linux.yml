@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Library Ing Software
 run-name: ${{ github.actor }} is compiling linux library
 on: [push]
 jobs:
@@ -19,9 +19,9 @@ jobs:
           make
           ls
           pwd
-      - run: echo "🍏 This job's status is ${{ job.status }}."
       - uses: actions/upload-artifact@v3
         with:
           name: library 
           path: libVector.a
           retention-days: 1
+      - run: echo "🍏 This job's status is ${{ job.status }}."
