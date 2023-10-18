@@ -22,5 +22,5 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: library 
-          path: /
+          path: /libVector.a
           retention-days: 1
