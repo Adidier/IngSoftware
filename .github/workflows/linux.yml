@@ -15,15 +15,14 @@ jobs:
       - name: Compiling library 
         run: |
           pwd
-          cmake . build
+          cmake . 
           make
-          ls
-          cd build
+
           ls
           pwd
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - uses: actions/upload-artifact@v3
         with:
           name: library 
-          path: build/libVector.a
+          path: libVector.a
           retention-days: 1
