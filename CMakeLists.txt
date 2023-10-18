@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(Vector)
 
-add_library(Vector "./src/vector.cpp")
+add_library(Vector "./src/Vector.cpp")
 
 include_directories("include")
 
