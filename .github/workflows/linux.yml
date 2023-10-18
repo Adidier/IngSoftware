@@ -17,4 +17,5 @@ jobs:
           pwd
           cmake .
           make
+          ls
       - run: echo "🍏 This job's status is ${{ job.status }}."
