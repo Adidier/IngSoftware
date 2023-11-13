@@ -5,6 +5,7 @@ class Vector3{
     float m_x,m_y,m_z; //Variables para el vector 3D sisi
     public:
     Vector3(float x,float y, float z); //Constructor genial
+    Vector3();
     float getX(); //get valor x
     float getY();//get valor y
     float getZ();//get valor z

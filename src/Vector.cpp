@@ -14,6 +14,12 @@
  * @author [Alfredo :c no sirve la docuemntacion tache :c]
  */
 
+Vector3::Vector3()
+{
+    m_x = 0;
+    m_y = 0;
+    m_z = 0;
+}
 
 Vector3::Vector3(float t_x, float t_y, float t_z)
 {
