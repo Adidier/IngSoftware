@@ -2,8 +2,7 @@
 #include <Vector.h>
 #include "SDL.h"
 
-
-int main()
+int main(int p, char* par[])
 {
    bool bClose=false;
    while(!bClose)
@@ -12,4 +11,5 @@ int main()
       //update
       //draw
    }
+   return 0;
 }
