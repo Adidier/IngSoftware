@@ -10,7 +10,9 @@ class Vector3{
     void direction();
     public:
 
-    Vector3(float t_x, float t_y, float t_z); //Constructor genial
+    Vector3(float x,float y, float z); //Constructor genial
+    Vector3();
+
     float getX(); //get valor x
     float getY();//get valor y
     float getZ();//get valor z

@@ -4,8 +4,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(Vector)
 
-add_library(Vector "src/Vector.cpp")
+
+add_library(Vector "src/vector.cpp" "include/Box.h" "src/Box.cpp" "include/BoxData.h" "src/BoxData.cpp")
+
 
 include_directories("include")
 
-ADD_EXECUTABLE(example main.cpp) 
+ADD_EXECUTABLE(example main.cpp "include/Box.h" "src/Box.cpp" "include/BoxData.h" "src/BoxData.cpp") 
