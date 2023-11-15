@@ -7,7 +7,7 @@ enum BoxType
 	BRICK,
 	GRASS,
 	WATHER,
-
+	MAX
 };
 
 class BoxData {

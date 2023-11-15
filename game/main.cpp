@@ -1,10 +1,10 @@
 #include <iostream>
 #include <Vector.h>
 #include "SDL.h"
+#include "Map.h"
 
 SDL_Window* gWindow;
 SDL_Surface* gScreenSurface;
-
 SDL_Surface* gHelloWorld = NULL;
 
 void input()
@@ -61,6 +61,7 @@ int main(int p, char* par[])
 {
    bool bClose=false;
    initWindow(640,480);
+   Map map1(60,60);
    gHelloWorld = SDL_LoadBMP("assets/hello.bmp");
    while(!bClose)
    {

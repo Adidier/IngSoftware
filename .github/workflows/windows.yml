@@ -14,12 +14,14 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: Compiling library 
         run: |
-          cmake . 
+          cd game
+          cd build
+          cmake ../. 
           cmake --build . --config Release
           dir
-      - uses: actions/upload-artifact@v3
-        with:
-          name: library 
-          path: Release/vector.lib
-          retention-days: 1
+      # - uses: actions/upload-artifact@v3
+      #   with:
+      #     name: library 
+      #     path: Release/vector.lib
+      #     retention-days: 1
       - run: echo "🍏 This job's status is ${{ job.status }}."

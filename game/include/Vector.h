@@ -1,3 +1,6 @@
+#ifndef VECTOR_H
+#define VECTOR_H
+
 #include <iostream>
 #include <cmath>
 
@@ -32,3 +35,5 @@ class Vector3{
     Vector3 operator-(Vector3 &t_vector);
     Vector3 operator+(const Vector3& vec2);
 };
+
+#endif 
