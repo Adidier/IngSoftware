@@ -14,6 +14,11 @@ ADD_EXECUTABLE(Tank "main.cpp"
 		    "src/Box.cpp"
 		    "src/BoxData.cpp"
 		    "src/Vector.cpp"
+		    "src/Input.cpp"
+		    "src/ResourceManager.cpp"
+			"src/WindowManager.cpp"
+			"src/Sprite.cpp"
+			"src/Object.cpp"
 		    "src/Map.cpp") 
  
 target_link_libraries(Tank "../ExternalLibs/SDL2/lib/x64/SDL2" "../ExternalLibs/SDL2_image/lib/x64/SDL2_image" "../ExternalLibs/SDL2/lib/x64/SDL2main")

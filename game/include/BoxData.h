@@ -10,7 +10,8 @@ enum BoxType
 	MAX
 };
 
-class BoxData {
+class BoxData 
+{
 public:
 	BoxData();
 	BoxData(BoxType boxType);

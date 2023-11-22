@@ -1,0 +1,3 @@
+tank1 assets/tank1.bmp
+tank2 assets/tank2.bmp
+tank3 assets/tank3.bmp
