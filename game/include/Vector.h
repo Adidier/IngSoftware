@@ -12,7 +12,7 @@ class Vector3{
     float m_directionZ;
     void direction();
     public:
-
+    //Rodrigo
     Vector3(float x,float y, float z); //Constructor genial
     Vector3();
 
@@ -24,6 +24,7 @@ class Vector3{
     static Vector3 cross(Vector3 &t_v1, Vector3 &t_v2);
     static float dot(const Vector3 &t_v1, const Vector3 &t_v2);
     Vector3 sub(const Vector3& subVector);
+    //Alfredo
     float getDirectionAxisX(); // float que regresa la direccion de x
     float getDirectionAxisY(); // float que regresa la direccion de y
     float getDirectionAxisZ(); // float que regresa la direccion de z
@@ -33,6 +34,12 @@ class Vector3{
     Vector3 operator*(float &t_scalar);
     float operator*(const Vector3 &t_v2);
     Vector3 operator-(Vector3 &t_vector);
+    /**
+     * @brief Get the file name of a public key
+     *
+     * @param rPublicKey The public key
+     * @return int The file name of the public key
+     */
     Vector3 operator+(const Vector3& vec2);
 };
 
