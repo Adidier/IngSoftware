@@ -16,9 +16,9 @@ class Vector3{
     Vector3(float x,float y, float z); //Constructor genial
     Vector3();
 
-    float getX(); //get valor x
-    float getY();//get valor y
-    float getZ();//get valor z
+    float getX() { return m_x; }; //get valor x
+    float getY() { return m_y; };//get valor y
+    float getZ() { return m_z; };//get valor z
     Vector3 add(const Vector3 &addVector); // Vector que suma al vector original otro vector
     Vector3 multiScalar(float &t_scalar); //Vector que se multiplica por un escalar
     static Vector3 cross(Vector3 &t_v1, Vector3 &t_v2);

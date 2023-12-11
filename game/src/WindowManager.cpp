@@ -37,27 +37,33 @@ void WindowManager::InitWindow(int wScreen, int hScreen)
     //Initialize SDL
     if (SDL_Init(SDL_INIT_VIDEO) < 0)
     {
-        printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
+        return;
     }
     else
     {
-        //Create window
-        gWindow = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, wScreen, hScreen, SDL_WINDOW_SHOWN);
-        if (gWindow == NULL)
-        {
-            printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
-        }
-        else
-        {
-            //Get window surface
-            gScreenSurface = SDL_GetWindowSurface(gWindow);
-            printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
-        }
+        SDL_SetHint(SDL_HINT_RENDER_DRIVER, "opengl");
+        gWindow = SDL_CreateWindow("Star Ship", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, wScreen, hScreen, SDL_WINDOW_SHOWN);
+    }
+    if (gWindow != nullptr)
+    {
+        renderer = SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
     }
 }
 
-void WindowManager::Draw()
+void WindowManager::Draw(Sprite* img, Vector3 pos)
 {
-   // SDL_BlitSurface(gHelloWorld, NULL, gScreenSurface, NULL);
-    SDL_UpdateWindowSurface(gWindow);
+    SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x0, 0xFF);
+    SDL_RenderClear(renderer);
+    SDL_Rect rect;
+    rect.x = pos.getX();
+    rect.y = pos.getY();
+    rect.w = img->GetWidth();
+    rect.h = img->GetWidth();
+    SDL_RenderCopy(renderer, img->GetTexture(), NULL, &rect);
+    SDL_RenderPresent(renderer);
+}
+
+SDL_Renderer* WindowManager::GetRender()
+{
+    return renderer;
 }

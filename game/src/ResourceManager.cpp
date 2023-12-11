@@ -37,3 +37,9 @@ ResourceManager::ResourceManager()
 {
 
 }
+
+Object* ResourceManager::GetResource(std::string resource)
+{
+	//if (resources.find(resource) != resources::)
+		return resources[resource];
+}

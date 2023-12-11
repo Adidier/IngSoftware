@@ -8,15 +8,18 @@
 int main(int p, char* par[])
 {
    bool bClose=false;
+
+   WindowManager::GetPtr()->InitWindow(640, 480);
    ResourceManager::GetPtr()->Load("assets/resources.txt");
-   WindowManager::GetPtr()->InitWindow(640,480);
+
    Map map1(60,60);
-   
+   Sprite* image =dynamic_cast<Sprite*>( ResourceManager::GetPtr()->GetResource("tank1"));
    while(!bClose)
    {
        WindowManager::GetPtr()->Input();
-       //update
-       WindowManager::GetPtr()->Draw();
+       WindowManager::GetPtr()->Draw(image,Vector3(0,0,0));
    }
    return 0;
 }
+
+

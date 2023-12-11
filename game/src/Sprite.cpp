@@ -1,6 +1,7 @@
 #pragma once
 #include "Sprite.h"
 #include "SDL_image.h"
+#include "WindowManager.h"
 
 Sprite::~Sprite()
 {
@@ -10,7 +11,8 @@ Sprite::~Sprite()
 Sprite::Sprite(std::string path)
 {
 	SDL_Surface* img = IMG_Load(path.c_str());
-	tex = SDL_CreateTextureFromSurface(nullptr /*TODO*/, img);
+	std::cout << " Reason: " << SDL_GetError() << std::endl;
+	tex = SDL_CreateTextureFromSurface(WindowManager::GetPtr()->GetRender(), img);
 	SDL_FreeSurface(img);
 	SDL_QueryTexture(tex, NULL, NULL, &width, &height);
 }
