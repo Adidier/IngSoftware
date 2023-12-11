@@ -21,7 +21,7 @@ public:
 	bool isDestroyable();
 	float getMaxHealth();
 	BoxType getType();
-	
+	Sprite* getSprite() { return m_sprite; }
 private:
 	void setProperties();
 	

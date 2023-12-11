@@ -1,3 +1,8 @@
 tank1 assets/tank1.png
 background assets/background.bmp
 tank3 assets/tank3.bmp
+Iron assets/Iron.png
+Stone assets/Stone.png
+Brick assets/Brick.png
+Grass assets/Grass.png
+Wather assets/Wather.png

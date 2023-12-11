@@ -52,6 +52,10 @@ void WindowManager::InitWindow(int wScreen, int hScreen)
 
 void WindowManager::Draw(Sprite* img, Vector3 pos)
 {
+    if (img == nullptr) {
+        return;
+    }
+
     SDL_Rect rect;
     rect.x = pos.getX();
     rect.y = pos.getY();

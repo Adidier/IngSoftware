@@ -1,5 +1,5 @@
 #include "Map.h"
-
+#include "WindowManager.h"
 
 Map::Map(int w,int h)
 {
@@ -9,6 +9,7 @@ Map::Map(int w,int h)
 	{
 		boxTypes.push_back(new BoxData(static_cast<BoxType>(i)));
 	}	
+	generate();
 }
 
 void Map::generate() {///////////
@@ -26,5 +27,13 @@ void Map::generate() {///////////
 
 void Map::Draw()
 {
-	
+	for (int i = 0; i < w; ++i)
+	{
+		for (int j = 0; j < h; ++j)
+		{
+			WindowManager::GetPtr()->Draw(
+				map[i][j].getBoxData()->getSprite(),
+				Vector3(i * 60, j * 60,0));
+		}
+	}
 }

@@ -12,6 +12,7 @@ public :
 	bool isWalkable();
 	bool isDestroyable();
 	BoxType getType();
+	BoxData* getBoxData() { return m_boxData; }
 private:
 	void Destroy();
 	BoxData* m_boxData;

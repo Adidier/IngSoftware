@@ -20,8 +20,8 @@ int main(int p, char* par[])
        WindowManager::GetPtr()->Input();
        WindowManager::GetPtr()->ClearScreen();
        WindowManager::GetPtr()->Draw(back, Vector3(0, 0, 0));
-       WindowManager::GetPtr()->Draw(image,Vector3(0,0,0));
-
+       map1.Draw();
+       WindowManager::GetPtr()->Draw(image, Vector3(0, 0, 0));
        WindowManager::GetPtr()->UpdateScreen();
    }
    return 0;
