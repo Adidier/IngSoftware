@@ -1,7 +1,8 @@
 #pragma once
-
+#include "Sprite.h"
 enum BoxType
 {
+	NONE,////
 	IRON,
 	STONE,
 	BRICK,
@@ -25,7 +26,7 @@ private:
 	void setProperties();
 	
 
-	//Texture m_texture;
+	Sprite* m_sprite;///////
 	BoxType m_type;
 	bool m_isWalkable;
 	bool m_isDestroyable;
