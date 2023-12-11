@@ -13,5 +13,5 @@ private:
 	std::vector<std::vector<Box>> map;
 	std::vector<BoxData*> boxTypes;
 	void generate();
-	void Draw();
+
 };

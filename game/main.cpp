@@ -12,8 +12,10 @@ int main(int p, char* par[])
 
    WindowManager::GetPtr()->InitWindow(640, 480);
    ResourceManager::GetPtr()->Load("assets/resources.txt");
+
    GameLoopManager::GetPtr()->Loop();
    
+
    return 0;
 }
 
