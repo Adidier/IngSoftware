@@ -52,15 +52,23 @@ void WindowManager::InitWindow(int wScreen, int hScreen)
 
 void WindowManager::Draw(Sprite* img, Vector3 pos)
 {
-    SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x0, 0xFF);
-    SDL_RenderClear(renderer);
     SDL_Rect rect;
     rect.x = pos.getX();
     rect.y = pos.getY();
     rect.w = img->GetWidth();
     rect.h = img->GetWidth();
     SDL_RenderCopy(renderer, img->GetTexture(), NULL, &rect);
+}
+
+void WindowManager::UpdateScreen()
+{
     SDL_RenderPresent(renderer);
+}
+
+void WindowManager::ClearScreen()
+{
+    SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x0, 0xFF);
+    SDL_RenderClear(renderer);
 }
 
 SDL_Renderer* WindowManager::GetRender()

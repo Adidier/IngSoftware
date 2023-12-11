@@ -13,6 +13,8 @@ public:
     void Input();
     void InitWindow(int wScreen, int hScreen);
     void Draw(Sprite* img, Vector3 pos);
+    void UpdateScreen();
+    void ClearScreen();
     SDL_Renderer* GetRender();
 private:
 	WindowManager();
