@@ -6,3 +6,4 @@ Stone assets/Stone.png
 Brick assets/Brick.png
 Grass assets/Grass.png
 Wather assets/Wather.png
+Map assets/map.txt

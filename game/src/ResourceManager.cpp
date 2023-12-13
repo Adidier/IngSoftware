@@ -43,8 +43,35 @@ Object* ResourceManager::GetResource(std::string resource)
 	auto it = resources.find(resource);
 	if (it != resources.end()) {
 		return resources[resource];
+
 	}
 	else {
 		return nullptr;
 	}
+}
+
+std::string ResourceManager::readTxtFile(std::string filePath) {
+	std::ifstream archivo(filePath);
+
+	
+	if (!archivo.is_open()) {
+		std::cerr << "Error al abrir el archivo " << filePath << std::endl;
+		return "";
+	}
+
+	std::string contenidoArchivo;
+	char caracter;
+	while (archivo.get(caracter)) {
+		if (caracter == '\n') {
+			continue;
+		}
+		contenidoArchivo += caracter;
+	}
+
+	
+	archivo.close();
+
+	
+	return contenidoArchivo;
+
 }

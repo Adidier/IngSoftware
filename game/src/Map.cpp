@@ -1,5 +1,8 @@
 #include "Map.h"
 #include "WindowManager.h"
+#include <fstream>
+#include "ResourceManager.h"
+#include <string>
 
 Map::Map(int w,int h)
 {
@@ -13,13 +16,17 @@ Map::Map(int w,int h)
 }
 
 void Map::generate() {///////////
-	for (int i = 0; i < w; ++i)
+	
+	std::string mapString = ResourceManager::readTxtFile("assets/map.txt");
+
+	for (int i = 0; i < 11; ++i)
 	{
 		//Modificar a generacion con automata celular
 		std::vector<Box> line;
-		for (int j = 0; j < h; ++j)
+		for (int j = 0; j < 8; ++j)
 		{
-			line.push_back(Box(Vector3(i, j, 0), boxTypes[rand() % BoxType::MAX]));
+			int type = mapString[i * 8 +j] - 'O' + 31;
+			line.push_back(Box(Vector3(i, j, 0), boxTypes[type]));
 		}
 		map.push_back(line);
 	}
@@ -27,9 +34,9 @@ void Map::generate() {///////////
 
 void Map::Draw()
 {
-	for (int i = 0; i < w; ++i)
+	for (int i = 0; i < 11; ++i)
 	{
-		for (int j = 0; j < h; ++j)
+		for (int j = 0; j <8; ++j)
 		{
 			WindowManager::GetPtr()->Draw(
 				map[i][j].getBoxData()->getSprite(),
