@@ -21,7 +21,7 @@ class Player : public Object{
 private:
     Sprite* img;
     float posX;
-    float posX;
+    float posY;
     float energy;
     
 public:
