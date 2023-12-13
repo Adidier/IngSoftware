@@ -22,6 +22,8 @@ ADD_EXECUTABLE(Tank "main.cpp"
 		   "src/Map.cpp"
 			"src/GameLoopManager.cpp"
 			"src/Tank.cpp"
+			"src/Player.cpp"
+			"src/Enemy.cpp"
 			"src/Command.cpp") 
 
  
