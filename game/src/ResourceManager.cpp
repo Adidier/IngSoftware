@@ -40,6 +40,11 @@ ResourceManager::ResourceManager()
 
 Object* ResourceManager::GetResource(std::string resource)
 {
-	//if (resources.find(resource) != resources::)
+	auto it = resources.find(resource);
+	if (it != resources.end()) {
 		return resources[resource];
+	}
+	else {
+		return nullptr;
+	}
 }
