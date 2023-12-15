@@ -16,3 +16,8 @@ void Tank::moveLeft() {
 void Tank::moveRight() {
     std::cout << "Tanque moviéndose hacia la derecha" << std::endl;
 }
+
+const Collider Tank::getCollider()
+{
+    return m_collider;
+}
