@@ -1,18 +1,25 @@
 // tank.cpp
 #include "tank.h"
 
+
+Tank::Tank() : x(0), y(0) {}
+
 void Tank::moveUp() {
-    std::cout << "Tanque moviéndose hacia arriba" << std::endl;
+    y++;
+    std::cout << "Tanque moviéndose hacia arriba. Nueva posición: (" << x << ", " << y << ")" << std::endl;
 }
 
 void Tank::moveDown() {
-    std::cout << "Tanque moviéndose hacia abajo" << std::endl;
+    y--;
+    std::cout << "Tanque moviéndose hacia abajo. Nueva posición: (" << x << ", " << y << ")" << std::endl;
 }
 
 void Tank::moveLeft() {
-    std::cout << "Tanque moviéndose hacia la izquierda" << std::endl;
+    x--;
+    std::cout << "Tanque moviéndose hacia la izquierda. Nueva posición: (" << x << ", " << y << ")" << std::endl;
 }
 
 void Tank::moveRight() {
-    std::cout << "Tanque moviéndose hacia la derecha" << std::endl;
+    x++;
+    std::cout << "Tanque moviéndose hacia la derecha. Nueva posición: (" << x << ", " << y << ")" << std::endl;
 }
