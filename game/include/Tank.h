@@ -5,6 +5,10 @@
 #include <iostream>
 
 class Tank {
+
+    private:
+    int x;  // Posición en el eje X
+    int y;  // Posición en el eje Y
 public:
     void moveUp();
     void moveDown();

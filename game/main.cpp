@@ -15,6 +15,18 @@ int main(int p, char* par[])
 
    GameLoopManager::GetPtr()->Loop();
    
+   /*
+   Tank tank;
+    tank.printPosition();
+
+    MoveCommand moveUpCommand(tank, &Tank::moveUp);
+    MoveCommand moveRightCommand(tank, &Tank::moveRight);
+
+    moveUpCommand.execute();
+    tank.printPosition();
+
+    moveRightCommand.execute();
+    tank.printPosition();*/
 
    return 0;
 }
